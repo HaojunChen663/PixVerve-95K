@@ -47,8 +47,7 @@
       <img src='https://img.shields.io/badge/PixVerve-Page-93edc7?style=flat&logo=googlechrome&logoColor=93edc7'
       alt='webpage-Web'>
     </a>
-    <a href="">
-      <img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Dataset | Benchmark&color=ffcc4d">
+    <a href=''>
+      <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset | Benchmark-ffcc4d">
     </a>
 </p>
-
