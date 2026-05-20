@@ -87,3 +87,21 @@
 - [ ] Release inference code.
 - [ ] Release training code.
 - [ ] Release model checkpoints.
+
+## 🤗 Acknowledgement
+We would like to thank the contributors to the [Diffusers](https://github.com/huggingface/diffusers), [Aesthetic-Train-V2](https://huggingface.co/datasets/zhang0jhon/Aesthetic-Train-V2), [UltraHR-100K](https://huggingface.co/datasets/zhihefang/UltraHR-100K), [ArtiMuse](https://huggingface.co/Thunderbolt215215/ArtiMuse), [ODTSR](https://github.com/RedMediaTech/ODTSR), [FLUX.2](https://github.com/black-forest-labs/flux2), [L2P](https://github.com/NJU-PCALab/L2P) and [Qwen](https://huggingface.co/Qwen), for their open researches.
+
+## ⭐ Citation
+If you find our work helpful, please leave us a ⭐ and cite our paper:
+
+```
+@misc{chen2026pixverveadvancingnativeuhr,
+      title={PixVerve: Advancing Native UHR Image Generation to 100MP with a Large-Scale High-Quality Dataset}, 
+      author={Haojun Chen and Haoyang He and Chengming Xu and Qingdong He and Junwei Zhu and Yabiao Wang and Zhucun Xue and Xianfang Zeng and Zhennan Chen and Xiaobin Hu and Hao Zhao and Yong Liu and Jiangning Zhang and Dacheng Tao},
+      year={2026},
+      eprint={2605.20147},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2605.20147}, 
+}
+```
