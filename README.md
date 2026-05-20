@@ -48,6 +48,9 @@
       alt='webpage-Web'>
     </a>
     <a href=''>
-      <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset | Benchmark-ffcc4d">
+      <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Benchmark-ffcc4d">
+    </a>
+    <a href=''>
+      <img src="https://img.shields.io/badge/ModelScope-Dataset | Benchmark-624aff?logo=modelscope" />
     </a>
 </p>
