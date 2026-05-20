@@ -47,10 +47,10 @@
       <img src='https://img.shields.io/badge/PixVerve-Page-93edc7?style=flat&logo=googlechrome&logoColor=93edc7'
       alt='webpage-Web'>
     </a>
-    <a href=''>
+    <a href='https://huggingface.co/datasets/HaojunChen/PixVerve-95K'>
       <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Benchmark-ffcc4d">
     </a>
-    <a href=''>
+    <a href='https://modelscope.cn/datasets/APRIL6AIGC/PixVerve-95K'>
       <img src="https://img.shields.io/badge/ModelScope-Dataset | Benchmark-624aff?logo=modelscope" />
     </a>
 </p>
