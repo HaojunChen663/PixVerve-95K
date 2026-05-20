@@ -39,7 +39,7 @@
     <sup>6</sup><strong>Nanyang Technological University</strong>
 </p>
 <p align="center">
-    <a href=''>
+    <a href='https://arxiv.org/abs/2605.20147'>
       <img src='https://img.shields.io/badge/arXiv-PDF-red?style=flat&logo=arXiv&logoColor=red'
       alt='arXiv PDF'>
     </a> 
