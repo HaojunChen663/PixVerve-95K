@@ -68,4 +68,12 @@
 2. Based on our proposed PixVerve-95K, we first **explore the attempt of generating 100MP images natively**. Specifically, we extend existing T2I foundation models (including both latent diffusion models and pixel diffusion models) with three distinct training schemes, providing valuable insights and paving the way for future breakthroughs.
 3. To address the limitations of conventional T2I benchmarks, we construct **PixVerve-Bench**, a systematic, hierarchical evaluation protocol incorporating both traditional metrics and assessments based on Multimodal Large Language Models (MLLMs).
 
-## :movie_camera: Overview of PixVerve-95K Dataset
+## 🎥 Overview of PixVerve-95K Dataset
+
+**Data Pipeline:**
+
+<img src="assets/data-pipeline.png" width.="1000px">
+
+**Dataset Statistical Distributions:**
+
+<img src="assets/data-statistics.png" width.="1000px">
