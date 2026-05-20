@@ -55,11 +55,24 @@
     </a>
 </p>
 
-## 🔥 Updates
+## 🔥 News
 
 - __[2026.05.20]__: We release the [paper](https://arxiv.org/abs/2605.20147), the [project page](https://haojunchen663.github.io/projects/PixVerve/), the [PixVerve-95K](https://modelscope.cn/datasets/APRIL6AIGC/PixVerve-95K) dataset, the [PixVerve-Bench](https://huggingface.co/datasets/HaojunChen/PixVerve-95K) benchmark, and the [github repo](https://github.com/HaojunChen663/PixVerve-95K).
 
+<a name="introduction"></a>
+
 ## 📷 Introduction
 💡**TL;DR:** 
-**PixVerve** explores and proposes a comprehensive methodology framework spanning dataset, model, and benchmark, taking a pioneering step to advance native text-to-image generation to 100MP.
+[**PixVerve**](https://arxiv.org/abs/2605.20147) explores and proposes a comprehensive methodology framework spanning dataset, model, and benchmark, taking a pioneering step to advance native text-to-image generation to 100MP.
 
+<a name="highlight"></a>
+
+## ✨ Highlights
+1. We introduce **PixVerve-95K**, the first large-scale, high-quality T2I dataset to push image resolution to 100MP. With a five-stage, automated data pipeline, we curate 95,735 100MP images with fine-grained annotations (5 types of metadata and 2 comprehensive captions), directly supporting the training or fine-tuning of T2I models at high resolutions.
+2. Based on our proposed PixVerve-95K, we first **explore the attempt of generating 100MP images natively**. Specifically, we extend existing T2I foundation models (including both latent diffusion models and pixel diffusion models) with three distinct training schemes, providing valuable insights and paving the way for future breakthroughs.
+3. To address the limitations of conventional T2I benchmarks, we construct **PixVerve-Bench**, a systematic, hierarchical evaluation protocol incorporating both traditional metrics and assessments based on Multimodal Large Language Models (MLLMs).
+
+# :mailbox_with_mail:Summary of Contents
+
+- [Introduction](##introduction)  
+- [Highlights](##highlight)  
