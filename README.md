@@ -54,3 +54,12 @@
       <img src="https://img.shields.io/badge/ModelScope-Dataset | Benchmark-624aff?logo=modelscope" />
     </a>
 </p>
+
+## 🔥 Updates
+
+- __[2026.05.20]__: We release the [paper](https://arxiv.org/abs/2605.20147), the [project page](https://haojunchen663.github.io/projects/PixVerve/), the [PixVerve-95K](https://modelscope.cn/datasets/APRIL6AIGC/PixVerve-95K) dataset, the [PixVerve-Bench](https://huggingface.co/datasets/HaojunChen/PixVerve-95K) benchmark, and the [github repo](https://github.com/HaojunChen663/PixVerve-95K).
+
+## 📷 Introduction
+💡**TL;DR:** 
+**PixVerve** explores and proposes a comprehensive methodology framework spanning dataset, model, and benchmark, taking a pioneering step to advance native text-to-image generation to 100MP.
+
