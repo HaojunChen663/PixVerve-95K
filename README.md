@@ -56,7 +56,6 @@
 </p>
 
 ## 🔥 News
-
 - __[2026.05.20]__: We release the [paper](https://arxiv.org/abs/2605.20147), the [project page](https://haojunchen663.github.io/projects/PixVerve/), the [PixVerve-95K](https://modelscope.cn/datasets/APRIL6AIGC/PixVerve-95K) dataset, the [PixVerve-Bench](https://huggingface.co/datasets/HaojunChen/PixVerve-95K) benchmark, and the [github repo](https://github.com/HaojunChen663/PixVerve-95K).
 
 ## 📷 Introduction
@@ -77,3 +76,14 @@
 **Dataset Statistical Distributions:**
 
 <img src="assets/data-statistics.png" width.="1000px">
+
+## 📏 Evaluation & Benchmark
+
+## 🗓️ Updates
+- [x] Release GitHub repo.
+- [x] Release arXiv paper.
+- [x] Release PixVerve-95K and PixVerve-Bench.
+- [x] Release evaluation code for PixVerve-Bench.
+- [ ] Release inference code.
+- [ ] Release training code.
+- [ ] Release model checkpoints.
