@@ -68,16 +68,37 @@
 3. To address the limitations of conventional T2I benchmarks, we construct **PixVerve-Bench**, a systematic, hierarchical evaluation protocol incorporating both traditional metrics and assessments based on Multimodal Large Language Models (MLLMs).
 
 ## 🎥 Overview of PixVerve-95K Dataset
-
-**Data Pipeline:**
-
+<p align="center">
+    <strong>Data Pipeline:</strong>
+</p>
 <img src="assets/data-pipeline.png" width.="1000px">
 
-**Dataset Statistical Distributions:**
-
+<p align="center">
+    <strong>Dataset Statistical Distributions:</strong>
+</p>
 <img src="assets/data-statistics.png" width.="1000px">
 
 ## 📏 Evaluation & Benchmark
+1. To evaluate your model on PixVerve-Bench, you may first download the following pretrained models as referenced below:
+   - [Qwen/Qwen3.5-35B-A3B](https://huggingface.co/Qwen/Qwen3.5-35B-A3B)
+   - [FG-CLIP2-Base](https://huggingface.co/qihoo360/fg-clip2-base)
+
+2. After downloading the required checkpoints, you can download the [PixVerve-Bench](https://huggingface.co/datasets/HaojunChen/PixVerve-95K) database to your local path using:
+   ```
+   huggingface-cli download --repo-type dataset --resume-download HaojunChen/PixVerve-95K --local-dir $YOUR_LOCAL_PATH$
+   ```
+
+3. Now you can run your own t2i model using `"long_caption"` specified in the `benchmark.jsonl` file, to generate the corresponding images. The file names of the generated images must match the corresponding `"file_name"` exactly.
+
+4. For evaluation on the mllm-agnostic metrics:
+    ```
+    cd eval
+    CUDA_VISIBLE_DEVICES=0 python eval.py \
+       --gen_dir $YOUR_GEN_DIR$ \
+       --real_dir $BENCH_IMAGES_DIR$ \
+       --jsonl_file $BENCH_JSONL_PATH$ \
+       --fg_clip2_model_path $FG_CLIP2_PATH$ \
+    ```
 
 ## 🗓️ Updates
 - [x] Release GitHub repo.
@@ -89,11 +110,10 @@
 - [ ] Release model checkpoints.
 
 ## 🤗 Acknowledgement
-We would like to thank the contributors to the [Diffusers](https://github.com/huggingface/diffusers), [Aesthetic-Train-V2](https://huggingface.co/datasets/zhang0jhon/Aesthetic-Train-V2), [UltraHR-100K](https://huggingface.co/datasets/zhihefang/UltraHR-100K), [ArtiMuse](https://huggingface.co/Thunderbolt215215/ArtiMuse), [ODTSR](https://github.com/RedMediaTech/ODTSR), [FLUX.2](https://github.com/black-forest-labs/flux2), [L2P](https://github.com/NJU-PCALab/L2P) and [Qwen](https://huggingface.co/Qwen), for their open researches.
+We would like to thank the contributors to the [Diffusers](https://github.com/huggingface/diffusers), [Aesthetic-Train-V2](https://huggingface.co/datasets/zhang0jhon/Aesthetic-Train-V2), [UltraHR-100K](https://huggingface.co/datasets/zhihefang/UltraHR-100K), [ArtiMuse](https://huggingface.co/Thunderbolt215215/ArtiMuse), [ODTSR](https://github.com/RedMediaTech/ODTSR), [FLUX.2](https://github.com/black-forest-labs/flux2), [L2P](https://github.com/NJU-PCALab/L2P) [FG-CLIP2](https://huggingface.co/qihoo360/fg-clip2-base), and [Qwen](https://huggingface.co/Qwen), for their open researches.
 
 ## ⭐ Citation
 If you find our work helpful, please leave us a ⭐ and cite our paper:
-
 ```
 @misc{chen2026pixverveadvancingnativeuhr,
       title={PixVerve: Advancing Native UHR Image Generation to 100MP with a Large-Scale High-Quality Dataset}, 

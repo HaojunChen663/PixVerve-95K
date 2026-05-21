@@ -21,19 +21,7 @@ def parse_args():
     parser.add_argument("--fg_clip2_model_path", type=str, default="./model/fg-clip2-base", help="The path to FG-CLIP2 model")
     parser.add_argument("--size", type=int, default=4096, help="The size of generated images")
     parser.add_argument("--device", type=str, default="cuda")
-    # parser.add_argument("--crci_workers", type=int, default=4, help="The number of processes to compute CRCI")
     return parser.parse_args()
-
-# def crci_worker(img_tasks, device, score_dict):
-#     device = device
-#     crci_evaluator = CRCIEvaluator(device=device)
-#     for img_path in img_tasks:
-#         name = os.path.basename(img_path)
-#         try:
-#             score = crci_evaluator.evaluate_crci(str(img_path))
-#             score_dict[name] = score
-#         except Exception as e:
-#             score_dict[name] = f"Error: {str(e)}"
 
 def main():
     args = parse_args()
@@ -87,34 +75,6 @@ def main():
     print("Computing GLCM Score...")
     glcm_score = evaluator.compute_glcm_score(gen_images)
     print(f"GLCM Score: {glcm_score:.4f}")
-
-    # print("Computing CRCI...")
-    # crci_workers = args.crci_workers
-    # img_chunks = [gen_images[i::crci_workers] for i in range(crci_workers)]   # Tasks chunking
-    # # Multi-process CRCI computation
-    # mp.set_start_method('spawn', force=True)
-    # manager = mp.Manager()
-    # score_dict = manager.dict()
-    # processes = []
-    # for i in range(crci_workers):
-    #     p = mp.Process(target=crci_worker, args=(img_chunks[i], args.device, score_dict))
-    #     p.start()
-    #     processes.append(p)
-    # with tqdm(total=len(gen_images), desc="CRCI Evaluation") as pbar:
-    #     last_count = 0
-    #     while any(p.is_alive() for p in processes):
-    #         current_count = len(score_dict)
-    #         pbar.update(current_count - last_count)
-    #         last_count = current_count
-    #         pbar.refresh()
-    # for p in processes:
-    #     p.join()
-
-    # crci_scores = dict(score_dict)
-    # valid_scores = [v for v in crci_scores.values() if isinstance(v, float)]
-    # crci = sum(valid_scores) / len(valid_scores) if valid_scores else 0
-    # print(f"Total valid CRCI scores: {len(valid_scores)}")
-    # print(f"CRCI: {crci:.4f}")
 
     print("\n" + "="*50)
     print(f"Evaluation Results on PixVerve-Bench for: {os.path.basename(args.gen_dir)}")
