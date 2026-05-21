@@ -102,14 +102,10 @@
 
 5. For evaluation on the mllm-based metrics **MSFI** and **ICS**:
     - We recommend setting up Qwen3.5-35B-A3B serving using [vLLM](https://docs.vllm.ai/en/stable/getting_started/installation/index.html) (a high-throughput and memory-efficient inference and serving engine for LLMs). For detailed usage guide, see the [vLLM Qwen3.5 recipe](https://docs.vllm.ai/projects/recipes/en/latest/Qwen/Qwen3.5.html).
-    - For Multi-scale Fidelity Index (MSFI) evaluation:
+    - For Multi-scale Fidelity Index (MSFI) and Instance-centric Compliance Score (ICS) evaluation:
     ```
     cd eval
     bash run_msfi_eval.sh
-    ```
-    - For Instance-centric Compliance Score (ICS) evaluation:
-    ```
-    cd eval
     bash run_ics_eval.sh
     ```
 
