@@ -101,13 +101,23 @@
     ```
 
 5. For evaluation on the mllm-based metrics **MSFI** and **ICS**:
-    - We recommend setting up Qwen3.5-35B-A3B serving using [vLLM](https://docs.vllm.ai/en/stable/getting_started/installation/index.html) (a high-throughput and memory-efficient inference and serving engine for LLMs). For detailed usage guide, see the [vLLM Qwen3.5 recipe](https://docs.vllm.ai/projects/recipes/en/latest/Qwen/Qwen3.5.html).
+    - We recommend setting up Qwen3.5-35B-A3B serving using [vLLM](https://docs.vllm.ai/en/stable/getting_started/installation/index.html) (a high-throughput and memory-efficient inference and serving engine for LLMs). For detailed usage guide, see the [vLLM Qwen3.5 recipe](https://docs.vllm.ai/projects/recipes/en/latest/Qwen/Qwen3.5.html). The following will create API endpoints at `http://localhost:8000/v1`:
+      ```
+      vllm serve $YOUR_QWEN35_MODEL_PATH$ \
+         --port 8000 --tensor-parallel-size 2 \
+         --gpu-memory-utilization 0.9 \
+         --max-model-len 32768 \
+         --reasoning-parser qwen3 \
+         --mm-encoder-tp-mode data \
+         --mm-processor-cache-type shm \
+         --enable-prefix-caching \
+      ```
     - For Multi-scale Fidelity Index (MSFI) and Instance-centric Compliance Score (ICS) evaluation:
-    ```
-    cd eval
-    bash run_msfi_eval.sh
-    bash run_ics_eval.sh
-    ```
+      ```
+      cd eval
+      bash run_msfi_eval.sh
+      bash run_ics_eval.sh
+      ```
 
 ## 🗓️ Updates
 - [x] Release GitHub repo.
