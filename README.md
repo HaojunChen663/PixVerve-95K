@@ -88,9 +88,9 @@
    huggingface-cli download --repo-type dataset --resume-download HaojunChen/PixVerve-95K --local-dir $YOUR_LOCAL_PATH$
    ```
 
-3. Now you can run your own t2i model using `"long_caption"` specified in the `benchmark.jsonl` file, to generate the corresponding images. The file names of the generated images must match the corresponding `"file_name"` exactly.
+3. Now you can run your own text-to-image model using `"long_caption"` specified in the `benchmark.jsonl` file, to generate the corresponding images. The file names of the generated images must match the corresponding `"file_name"` exactly.
 
-4. For evaluation on the mllm-agnostic metrics:
+4. For evaluation on the MLLM-agnostic metrics:
     ```
     cd eval
     CUDA_VISIBLE_DEVICES=0 python eval.py \
@@ -100,7 +100,7 @@
        --fg_clip2_model_path $FG_CLIP2_PATH$ \
     ```
 
-5. For evaluation on the mllm-based metrics **MSFI** and **ICS**:
+5. For evaluation on the MLLM-as-a-judge metrics **MSFI** and **ICS**:
     - We recommend setting up Qwen3.5-35B-A3B serving using [vLLM](https://docs.vllm.ai/en/stable/getting_started/installation/index.html) (a high-throughput and memory-efficient inference and serving engine for LLMs). For detailed usage guide, see the [vLLM Qwen3.5 recipe](https://docs.vllm.ai/projects/recipes/en/latest/Qwen/Qwen3.5.html). The following will create API endpoints at `http://localhost:8000/v1`:
       ```
       vllm serve $YOUR_QWEN35_MODEL_PATH$ \
@@ -115,8 +115,8 @@
     - For Multi-scale Fidelity Index (MSFI) and Instance-centric Compliance Score (ICS) evaluation:
       ```
       cd eval
-      bash run_msfi_eval.sh
-      bash run_ics_eval.sh
+      bash run_msfi_eval.sh     # Modify run_msfi_eval.sh using your actual paths
+      bash run_ics_eval.sh      # Modify run_msfi_ics.sh using your actual paths
       ```
 
 ## 🗓️ Updates
