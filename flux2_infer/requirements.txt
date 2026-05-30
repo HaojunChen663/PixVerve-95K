@@ -1,0 +1,9 @@
+torch>=2.0.0
+transformers
+safetensors
+einops
+Pillow
+tqdm
+numpy
+sentencepiece
+protobuf
