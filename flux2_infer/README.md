@@ -1,8 +1,6 @@
 # FLUX.2 Klein Base 4B High-Resolution Inference
 
-This is a minimal inference-only extraction for `FLUX.2-klein-base-4B`.
-It keeps full-checkpoint inference, LoRA inference, global attention, and local attention.
-Training, benchmarks, generic DiffSynth pipelines, ModelPool, automatic downloads, and other model families are removed.
+**This folder provides the inference code for both full-attention and window-attention implementations for `FLUX.2 Klein Base 4B`. Both full-checkpoint inference and LoRA inference are provided.**
 
 ## Layout
 
@@ -27,7 +25,7 @@ flux2_infer/
 
 ## Expected Model Directory
 
-`--model_path` must point to a local FLUX.2-klein-base-4B directory with:
+`--model_path` must point to a local `FLUX.2-klein-base-4B` directory with:
 
 ```text
 FLUX.2-klein-base-4B/
@@ -43,12 +41,11 @@ FLUX.2-klein-base-4B/
 pip install -r flux2_infer/requirements.txt
 ```
 
-Optional attention packages such as FlashAttention, SageAttention, or xFormers are used automatically if installed.
-Otherwise PyTorch SDPA is used.
+Optional attention packages such as FlashAttention, SageAttention, or xFormers are used automatically if installed. Otherwise PyTorch SDPA is used.
 
 ## Scripts
 
-Run from the parent directory that contains `flux2_infer/`.
+Please run from the parent directory that contains `flux2_infer/`.
 
 ```bash
 MODEL_PATH=/path/to/FLUX.2-klein-base-4B \
@@ -76,7 +73,7 @@ RESOLUTION_PRESET=8k \
 flux2_infer/scripts/infer_lora_local.sh
 ```
 
-Useful environment variables:
+Related environment variables:
 
 ```bash
 PROMPT="Masterpiece, best quality ..."
@@ -95,7 +92,7 @@ VAE_TILE_SIZE=512
 VAE_TILE_STRIDE=256
 ```
 
-Local attention variables:
+Related variables for window attention:
 
 ```bash
 FLUX2_WINDOW_SIZE=24

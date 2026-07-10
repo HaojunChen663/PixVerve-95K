@@ -56,7 +56,8 @@
 </p>
 
 ## 🔥 News
-- __[2026.05.20]__: We release the [paper](https://arxiv.org/abs/2605.20147), the [project page](https://haojunchen663.github.io/projects/PixVerve/), the [PixVerve-95K](https://modelscope.cn/datasets/APRIL6AIGC/PixVerve-95K) dataset, the [PixVerve-Bench](https://huggingface.co/datasets/HaojunChen/PixVerve-95K) benchmark, and the [github repo](https://github.com/HaojunChen663/PixVerve-95K).
+- __[2026.06.22]__: We release the inference code for FLUX.2 (including both full-attention and window-attention implementations).
+- __[2026.05.20]__: We release the [paper](https://arxiv.org/abs/2605.20147), the [project page](https://haojunchen663.github.io/projects/PixVerve/), the [PixVerve-95K](https://modelscope.cn/datasets/APRIL6AIGC/PixVerve-95K) dataset, the [PixVerve-Bench](https://huggingface.co/datasets/HaojunChen/PixVerve-95K) benchmark, the [github repo](https://github.com/HaojunChen663/PixVerve-95K), and the evaluation code for PixVerve-Bench.
 
 ## 📷 Introduction
 💡**TL;DR:** 
@@ -120,16 +121,17 @@
       ```
 
 ## 🗓️ Updates
-- [x] Release GitHub repo.
-- [x] Release arXiv paper.
+- [x] Release the GitHub repo.
+- [x] Release the arXiv paper.
 - [x] Release PixVerve-95K and PixVerve-Bench.
-- [x] Release evaluation code for PixVerve-Bench.
-- [ ] Release inference code.
-- [ ] Release training code.
-- [ ] Release model checkpoints.
+- [x] Release the evaluation code for PixVerve-Bench.
+- [x] Release the inference code.
+- [ ] Release the training code.
+- [ ] Release the model checkpoints for trained FLUX.2.
+- [x] Release the model checkpoints for trained L2P.
 
 ## 🤗 Acknowledgement
-We would like to thank the contributors to the [Diffusers](https://github.com/huggingface/diffusers), [Aesthetic-Train-V2](https://huggingface.co/datasets/zhang0jhon/Aesthetic-Train-V2), [UltraHR-100K](https://huggingface.co/datasets/zhihefang/UltraHR-100K), [ArtiMuse](https://huggingface.co/Thunderbolt215215/ArtiMuse), [ODTSR](https://github.com/RedMediaTech/ODTSR), [FLUX.2](https://github.com/black-forest-labs/flux2), [L2P](https://github.com/NJU-PCALab/L2P) [FG-CLIP2](https://huggingface.co/qihoo360/fg-clip2-base), and [Qwen](https://huggingface.co/Qwen), for their open researches.
+We would like to thank the contributors to the [Diffusers](https://github.com/huggingface/diffusers), [Aesthetic-Train-V2](https://huggingface.co/datasets/zhang0jhon/Aesthetic-Train-V2), [UltraHR-100K](https://huggingface.co/datasets/zhihefang/UltraHR-100K), [ArtiMuse](https://huggingface.co/Thunderbolt215215/ArtiMuse), [ODTSR](https://github.com/RedMediaTech/ODTSR), [FLUX.2](https://github.com/black-forest-labs/flux2), [L2P](https://github.com/NJU-PCALab/L2P), [FG-CLIP2](https://huggingface.co/qihoo360/fg-clip2-base), and [Qwen](https://huggingface.co/Qwen), for their open researches.
 
 ## ⭐ Citation
 If you find our work helpful, please leave us a ⭐ and cite our paper:
