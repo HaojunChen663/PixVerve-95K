@@ -1,6 +1,8 @@
 # FLUX.2 Klein Base 4B High-Resolution Inference
 
-**This folder provides the inference code for both full-attention and window-attention implementations for `FLUX.2 Klein Base 4B`. Both full-checkpoint inference and LoRA inference are provided.**
+**This directory provides the inference code for both full-attention and window-attention implementations for `FLUX.2 Klein Base 4B`. Both full-checkpoint inference and LoRA inference are provided.**
+
+---
 
 ## Layout
 
@@ -35,7 +37,9 @@ FLUX.2-klein-base-4B/
   tokenizer/
 ```
 
-## Install
+---
+
+## Installation
 
 ```bash
 pip install -r flux2_infer/requirements.txt
